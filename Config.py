@@ -6,17 +6,17 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'LuciferMoringstar_Robot')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ['17264725'])
+API_HASH = environ['e7c6c1e727962d2ade50ba1d7f4fac8a']
+BOT_TOKEN = environ['7467663197:AAEXu5mIB4jyKKO6tenQnu_mtBsngXg38t0']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
-BROADCAST_CHANNEL = int(os.environ.get("BROADCAST_CHANNEL", ""))
-ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "").split())
-DB_URL = os.environ.get("DATABASE_1", "")
+BROADCAST_CHANNEL = int(os.environ.get("BROADCAST_CHANNEL", "-1002399568031"))
+ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "5032034594").split())
+DB_URL = os.environ.get("DATABASE_1", "mongodb+srv://ZOROB:ZOROB@cluster0.uoqes.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST", True))
 
 # Admins, Channels & Users
@@ -29,8 +29,8 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 TUTORIAL = "https://youtu.be/5hnYOKBzyi8"
 # MongoDB information
-DATABASE_URI = environ['DATABASE_2']
-DATABASE_NAME = environ['BOT_NAME']
+DATABASE_URI = environ['mongodb+srv://FAR:FAR@cluster23.cnhng.mongodb.net/?retryWrites=true&w=majority&appName=Cluster23']
+DATABASE_NAME = environ['FARUBI']
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
