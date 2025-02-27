@@ -20,7 +20,7 @@ DB_URL = os.environ.get("DATABASE_1", "mongodb+srv://pcmovies:pcmovies@cluster0.
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST", True))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['5032034594'].split()]
+ADMIN_IDS = set(map(int, os.environ.get("ADMIN_IDS", "5032034594").split(",")))
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['-1002429399114'].split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
