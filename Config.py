@@ -6,9 +6,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'LuciferMoringstar_Robot')
-API_ID = int(environ['17264725'])
-API_HASH = environ['e7c6c1e727962d2ade50ba1d7f4fac8a']
-BOT_TOKEN = environ['7467663197:AAEXu5mIB4jyKKO6tenQnu_mtBsngXg38t0']
+API_ID = int(environ['12618934'])
+API_HASH = environ['49aacd0bc2f8924add29fb02e20c8a16']
+BOT_TOKEN = environ['7542270570:AAHmtBayzj91e9x2VjnO7rGMo-jrcS8giZY']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -16,7 +16,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 BROADCAST_CHANNEL = int(os.environ.get("BROADCAST_CHANNEL", "-1002399568031"))
 ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "5032034594").split())
-DB_URL = os.environ.get("DATABASE_1", "mongodb+srv://ZOROB:ZOROB@cluster0.uoqes.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_URL = os.environ.get("DATABASE_1", "mongodb+srv://pcmovies:pcmovies@cluster0.4vv9ebl.mongodb.net/?retryWrites=true&w=majority")
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST", True))
 
 # Admins, Channels & Users
@@ -26,7 +26,7 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('FORCES_SUB')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
-AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
+AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "@cinema_company2k").split()]
 TUTORIAL = "https://youtu.be/5hnYOKBzyi8"
 # MongoDB information
 DATABASE_URI = environ['DATABASE_2']
